@@ -29,7 +29,7 @@ public class Hooks {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            String path="src/test/java/resources/LoginData.xlsx";
+            String path="src/test/java/resources/error.xlsx";
             ExcelData.writeExcel(path,scenario,BaseWebDriver.browserName.get(),date.format(formatter));
         }
         BaseWebDriver.quitDriver();
