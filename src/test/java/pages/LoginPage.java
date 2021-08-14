@@ -19,6 +19,9 @@ public class LoginPage extends Parent{
     @FindBy(css = "button[aria-label='LOGIN']")
     private WebElement loginBtn;
 
+    @FindBy(css = "div[class='hot-toast-message']")
+    private WebElement loginErrorMsg;
+
     public WebElement getUsername() {
         return username;
     }
@@ -29,5 +32,9 @@ public class LoginPage extends Parent{
 
     public WebElement getLoginBtn() {
         return loginBtn;
+    }
+
+    public WebElement getLoginErrorMsg() {
+        return loginErrorMsg;
     }
 }

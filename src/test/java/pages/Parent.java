@@ -25,7 +25,7 @@ public class Parent {
 
     public void sendKeysFunction(WebElement webElement, String value) {
         waitUntilVisible(webElement);
-       // scrollUpToElement(webElement);
+        //scrollUpToElement(webElement);
         webElement.clear();
         webElement.sendKeys(value);
     }

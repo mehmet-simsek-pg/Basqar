@@ -31,6 +31,7 @@ public class LoginSteps {
     @Then("^Enter valid username and password$")
     public void enterValidUsernameAndPassword() {
 
+        dialogContent.clickFunction(dialogContent.getAcceptCookies());
         loginPage.sendKeysFunction(loginPage.getUsername(), loginData.get(1).get(0));
         loginPage.sendKeysFunction(loginPage.getPassword(), loginData.get(1).get(1));
         loginPage.clickFunction(loginPage.getLoginBtn());
@@ -50,6 +51,6 @@ public class LoginSteps {
 
     @Then("^Invalid text should be displayed$")
     public void invalidTextShouldBeDisplayed() {
-        dialogContent.verifyElementContainsText(dialogContent.getLoginErrorMsg(),"Invalid");
+        dialogContent.verifyElementContainsText(loginPage.getLoginErrorMsg(),"Invalid");
     }
 }
