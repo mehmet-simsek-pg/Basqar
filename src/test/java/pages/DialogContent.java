@@ -52,6 +52,15 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//button[text()='Accept all cookies']")
     private WebElement acceptCookies;
 
+    @FindBy(xpath = "//div[contains(text(),'already exists')]")
+    private WebElement alreadyExists;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
+    private WebElement InputShortName;
+
+    @FindBy(css = "button[aria-label='Close dialog']")
+    private WebElement closeDialog;
+
     public WebElement getAddBtn() {
         return addBtn;
     }
@@ -102,5 +111,17 @@ public class DialogContent extends Parent {
 
     public WebElement getAcceptCookies() {
         return acceptCookies;
+    }
+
+    public WebElement getAlreadyExists() {
+        return alreadyExists;
+    }
+
+    public WebElement getInputShortName() {
+        return InputShortName;
+    }
+
+    public WebElement getCloseDialog() {
+        return closeDialog;
     }
 }
