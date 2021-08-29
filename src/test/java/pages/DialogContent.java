@@ -32,10 +32,10 @@ public class DialogContent extends Parent {
     private WebElement searchBtn;
 
     @FindBy(id= "ms-text-field-0")
-    private WebElement inputName;
+    private WebElement name;
 
     @FindBy(id= "ms-text-field-1")
-    private WebElement inputCode;
+    private WebElement code;
 
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addBtn;
@@ -55,8 +55,11 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//div[contains(text(),'already exists')]")
     private WebElement alreadyExists;
 
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
-    private WebElement InputShortName;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
+    private WebElement inputName;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
+    private WebElement inputCode;
 
     @FindBy(css = "button[aria-label='Close dialog']")
     private WebElement closeDialog;
@@ -117,8 +120,12 @@ public class DialogContent extends Parent {
         return alreadyExists;
     }
 
-    public WebElement getInputShortName() {
-        return InputShortName;
+    public WebElement getName() {
+        return name;
+    }
+
+    public WebElement getCode() {
+        return code;
     }
 
     public WebElement getCloseDialog() {

@@ -24,10 +24,10 @@ public class CitizenShipSteps {
     }
 
     @When("^User a citizenship name as \"([^\"]*)\" shortname as \"([^\"]*)\"$")
-    public void userACitizenshipNameAsShortnameAs(String citizenShipName, String shortName)  {
+    public void userACitizenshipNameAsShortnameAs(String citizenShipName, String code)  {
         dialogContent.clickFunction(dialogContent.getAddBtn());
         dialogContent.sendKeysFunction(dialogContent.getInputName(), citizenShipName);
-        dialogContent.sendKeysFunction(dialogContent.getInputShortName(), shortName);
+        dialogContent.sendKeysFunction(dialogContent.getInputCode(), code);
         dialogContent.clickFunction(dialogContent.getSaveBtn());
     }
 

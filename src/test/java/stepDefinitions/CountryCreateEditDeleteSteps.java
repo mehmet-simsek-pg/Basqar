@@ -35,7 +35,7 @@ public class CountryCreateEditDeleteSteps {
     @When("^User delete the \"([^\"]*)\"$")
     public void userDeleteThe(String newCountryName) {
         dialogContent.scrollUpToElement(dialogContent.getRightScroll());
-        dialogContent.sendKeysFunction(dialogContent.getInputName(), newCountryName);
+        dialogContent.sendKeysFunction(dialogContent.getName(), newCountryName);
         dialogContent.clickFunction(dialogContent.getSearchBtn());
         dialogContent.waitUntilListLessThan(By.xpath("//ms-delete-button//button"),2);
         dialogContent.clickFunction(dialogContent.getDeleteBtn());
