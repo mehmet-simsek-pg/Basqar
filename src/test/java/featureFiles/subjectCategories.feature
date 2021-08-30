@@ -14,8 +14,7 @@ Feature: Subject Category Functionally
 
     Examples:
       | SubjectCategoryName | SubjectCategoriesCode |
-      | MySubjectCat23        | cat                   |
-
+      | MySubjectCat23      | cat                   |
 
 
   Scenario Outline: Try to delete MySubjectCat
