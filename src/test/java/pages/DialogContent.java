@@ -64,6 +64,9 @@ public class DialogContent extends Parent {
     @FindBy(css = "button[aria-label='Close dialog']")
     private WebElement closeDialog;
 
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.SHORTNAME']//input")
+    private WebElement inputShortName;
+
     public WebElement getAddBtn() {
         return addBtn;
     }
@@ -130,5 +133,9 @@ public class DialogContent extends Parent {
 
     public WebElement getCloseDialog() {
         return closeDialog;
+    }
+
+    public WebElement getInputShortName() {
+        return inputShortName;
     }
 }
