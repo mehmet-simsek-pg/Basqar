@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import pages.DialogContent;
 import pages.LeftNav;

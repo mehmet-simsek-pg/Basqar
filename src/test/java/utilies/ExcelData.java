@@ -1,6 +1,6 @@
 package utilies;
 
-import cucumber.api.Scenario;
+import io.cucumber.java.Scenario;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -62,7 +62,7 @@ public class ExcelData {
             cell.setCellValue(scenario.getId());
 
             cell = row.createCell(1);
-            cell.setCellValue(scenario.getStatus());
+            cell.setCellValue(scenario.getStatus().ordinal());
 
             cell = row.createCell(2);
             cell.setCellValue(browserName);
@@ -105,7 +105,7 @@ public class ExcelData {
             cell.setCellValue(scenario.getId());
 
             cell = row.createCell(1);
-            cell.setCellValue(scenario.getStatus());
+            cell.setCellValue(scenario.getStatus().ordinal());
 
             cell = row.createCell(2);
             cell.setCellValue(browserName);

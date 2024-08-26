@@ -1,7 +1,7 @@
 package stepDefinitions;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pages.DialogContent;
 import pages.LeftNav;
 

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utilies.BaseWebDriver;
 
+import java.time.Duration;
 import java.util.List;
 
 public class Parent {
@@ -19,7 +20,7 @@ public class Parent {
 
     public Parent() {
         js = (JavascriptExecutor) BaseWebDriver.getDriver();
-        wait = new WebDriverWait(BaseWebDriver.getDriver(), 30);
+        wait = new WebDriverWait(BaseWebDriver.getDriver(), Duration.ofSeconds(30));
         actions=new Actions(BaseWebDriver.getDriver()) ;
     }
 
@@ -58,7 +59,7 @@ public class Parent {
 
     public void myWait(int second) {
         try {
-            Thread.sleep(second * 1000);
+            Thread.sleep(second * 1000L);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -91,10 +92,6 @@ public class Parent {
     public void sendKeysWithActions (WebElement webElement, String value){
         actions.sendKeys(webElement,value).build().perform();
 
-
-
     }
-
-
 
 }
