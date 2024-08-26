@@ -1,6 +1,3 @@
-Certainly! Below is a `README.md` file that corresponds to the given `pom.xml` configuration. This `README.md` file provides an overview of the project, instructions for setup, usage, and any relevant information for contributors.
-
----
 
 # Basqar Project
 
